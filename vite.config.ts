@@ -13,4 +13,5 @@ export default defineConfig({
     port: 5173,
     open: true,
   },
+  base: "https://krober.github.io/icon-viewer/",
 });
