@@ -30,13 +30,17 @@
 
 <div class="main">
   <div class="header">
-    <div class="filter">
-      <input type="text" placeholder="filter..." bind:value={filter} />
-      <button on:click={clearFilter}>clear</button>
-    </div>
-    <div class="type-selection">
-      <label><input type="radio" value="fill" bind:group={selectedType} />Fill</label>
-      <label><input type="radio" value="outline" bind:group={selectedType} />Outline</label>
+    <div>icons from <a href="https://github.com/akveo/eva-icons">eva-icons</a></div>
+    <span>click icon to copy name</span>
+    <div class="controls">
+      <div class="filter">
+        <input type="text" placeholder="filter..." bind:value={filter} />
+        <button on:click={clearFilter}>clear</button>
+      </div>
+      <div class="type-selection">
+        <label><input type="radio" value="fill" bind:group={selectedType} />Fill</label>
+        <label><input type="radio" value="outline" bind:group={selectedType} />Outline</label>
+      </div>
     </div>
   </div>
   <div class="icons">
@@ -86,16 +90,23 @@
 
   .header {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem 2rem;
+    flex-direction: column;
+    gap: 2rem;
     place-content: center;
     font-size: 20px;
 
-    .filter {
+    .controls {
       display: flex;
+      flex-wrap: wrap;
+      place-content: center;
+      gap: 2rem 1rem;
 
-      input {
-        border-radius: 5px;
+      .filter {
+        display: flex;
+
+        input {
+          border-radius: 5px;
+        }
       }
     }
 
