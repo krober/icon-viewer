@@ -59,12 +59,34 @@
 </div>
 
 <style>
+  :root {
+    --background-color: #242424;
+    --text-color: #7D99B8;
+    --text-color-alternate: #fff;
+    --border-color: #2D3339;
+    --hover-background-color: #292929;
+    --hover-border-color: #2f383c;
+    --active-background-color: #262626;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --background-color: #f5f5f5;
+      --text-color: #5d7998;
+      --text-color-alternate: #fff;
+      --border-color: #abc9e8;
+      --hover-background-color: #f2f2f2;
+      --hover-border-color: #9db9d8;
+      --active-background-color: #fafafa;
+    }
+  }
+
   button {
     all: unset;
     display: inline-block;
     border: 1px solid var(--border-color);
     border-radius: 5px;
-    background-color: var(--background-color);
+    background-color: transparent;
     color: var(--text-color);
     padding: 0 0.5rem;
     cursor: pointer;
@@ -107,6 +129,21 @@
         input {
           border-radius: 5px;
         }
+
+        button {
+          color: var(--text-color-alternate);
+          background-color: #436488;
+
+          &:hover {
+            color: var(--text-color-alternate);
+            background-color: #537498;
+          }
+
+          &:active {
+            color: var(--text-color-alternate);
+            background-color: #436488;
+          }
+        }
       }
     }
 
@@ -137,28 +174,8 @@
       height: 88px;
 
       i {
-        font-size: 36px;
+        font-size: 32px;
       }
-    }
-  }
-
-  :root {
-    --background-color: #333;
-    --text-color: #f5f5f5;
-    --border-color: #555;
-    --hover-background-color: #444;
-    --hover-border-color: #666;
-    --active-background-color: #222;
-  }
-
-  @media (prefers-color-scheme: light) {
-    :root {
-      --background-color: #f5f5f5;
-      --text-color: #333;
-      --border-color: #ccc;
-      --hover-background-color: #e0e0e0;
-      --hover-border-color: #999;
-      --active-background-color: #d6d6d6;
     }
   }
 </style>
