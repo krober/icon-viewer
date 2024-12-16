@@ -1,0 +1,14 @@
+{
+  "tabWidth": 2,
+  "singleQuote": true,
+  "endOfLine": "auto",
+  "printWidth": 100,
+  "overrides": [
+    {
+      "files": "*.yml|*.yaml|*.tf",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}
