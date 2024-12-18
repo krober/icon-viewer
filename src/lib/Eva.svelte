@@ -69,18 +69,6 @@
     --active-background-color: #262626;
   }
 
-  @media (prefers-color-scheme: light) {
-    :root {
-      --background-color: #f5f5f5;
-      --text-color: #5d7998;
-      --text-color-alternate: #fff;
-      --border-color: #abc9e8;
-      --hover-background-color: #f2f2f2;
-      --hover-border-color: #9db9d8;
-      --active-background-color: #fafafa;
-    }
-  }
-
   button {
     all: unset;
     display: inline-block;
